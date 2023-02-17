@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { useRef } from 'react';
 import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
 import { movieDetails } from 'components/Shared/Api';
