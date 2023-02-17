@@ -8,7 +8,6 @@ import styles from './movieDetailsPage.module.css';
 
 const MovieDetailsPage = () => {
   const [items, setItems] = useState({});
-  const [error, setError] = useState(null);
 
   const { id } = useParams();
 
@@ -20,8 +19,8 @@ const MovieDetailsPage = () => {
       try {
         const data = await movieDetails(id);
         setItems(data);
-      } catch (error) {
-        setError('Ooops, something went wrong');
+      } catch {
+        alert('Ooops, something went wrong');
       }
     };
     fetchMovies();

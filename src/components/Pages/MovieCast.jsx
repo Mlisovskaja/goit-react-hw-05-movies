@@ -4,7 +4,6 @@ import { movieCast } from 'components/Shared/Api';
 
 const MovieCastPage = () => {
   const [items, setItems] = useState([]);
-  const [error, setError] = useState(null);
 
   const { id } = useParams();
 
@@ -13,8 +12,8 @@ const MovieCastPage = () => {
       try {
         const data = await movieCast(id);
         setItems(data);
-      } catch (error) {
-        setError('Ooops, something went wrong');
+      } catch {
+        alert('Ooops, something went wrong');
       }
     };
     fetchCast();

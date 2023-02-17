@@ -4,7 +4,6 @@ import { movieReviews } from 'components/Shared/Api';
 
 const MovieReviewsPage = () => {
   const [items, setItems] = useState([]);
-  const [error, setError] = useState(null);
 
   const { id } = useParams();
 
@@ -13,8 +12,8 @@ const MovieReviewsPage = () => {
       try {
         const data = await movieReviews(id);
         setItems(data);
-      } catch (error) {
-        setError('Ooops, something went wrong');
+      } catch {
+        alert('Ooops, something went wrong');
       }
     };
     fetchReviews();
