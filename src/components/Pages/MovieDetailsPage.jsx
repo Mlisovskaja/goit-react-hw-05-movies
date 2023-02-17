@@ -4,6 +4,8 @@ import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
 import { movieDetails } from 'components/Shared/Api';
 import { findGenresOfMovie } from 'components/Shared/findGenre';
 
+import styles from './movieDetailsPage.module.css';
+
 const MovieDetailsPage = () => {
   const [items, setItems] = useState({});
   const [error, setError] = useState(null);
@@ -37,7 +39,7 @@ const MovieDetailsPage = () => {
 
   return (
     <>
-      <div>
+      <div className={styles.box}>
         <Link to={ref.current}>Go back</Link>
         <img src={linkPoster + items.poster_path} alt={items.title} />
         <h2>
