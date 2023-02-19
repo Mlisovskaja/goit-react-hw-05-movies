@@ -38,17 +38,23 @@ const MovieDetailsPage = () => {
 
   return (
     <>
+      <Link to={ref.current}>Go back</Link>
       <div className={styles.box}>
-        <Link to={ref.current}>Go back</Link>
-        <img src={linkPoster + items.poster_path} alt={items.title} />
-        <h2>
-          {items.title} ({createYear(items.release_date)})
-        </h2>
-        <p>User score: {Math.round(items.popularity)}%</p>
-        <h3>Overview</h3>
-        <p>{items.overview}</p>
-        <h3>Genres</h3>
-        <p>{findGenresOfMovie(items.genres)}</p>
+        <img
+          className={styles.poster}
+          src={linkPoster + items.poster_path}
+          alt={items.title}
+        />
+        <div className={styles.desc}>
+          <h2>
+            {items.title} ({createYear(items.release_date)})
+          </h2>
+          <p>User score: {Math.round(items.popularity)}%</p>
+          <h3>Overview</h3>
+          <p>{items.overview}</p>
+          <h3>Genres</h3>
+          <p>{findGenresOfMovie(items.genres)}</p>
+        </div>
       </div>
       <div>
         <h3>Additional information</h3>

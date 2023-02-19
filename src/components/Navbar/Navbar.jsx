@@ -9,7 +9,7 @@ const Navbar = () => {
       <header>
         <ul className={styles.navmenu}>
           <li>
-            <NavLink to="/" className={styles.link} end>
+            <NavLink to="/" className={styles.link}>
               Home
             </NavLink>
           </li>

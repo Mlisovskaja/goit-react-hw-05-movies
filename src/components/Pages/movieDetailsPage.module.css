@@ -1,4 +1,16 @@
 .box {
     display: flex;
-    flex-direction: column;
+    margin-top: 15px;
+    
+}
+
+.poster {
+    width: 300px;
+    height: 400px;
+    margin-right: 30px;
+}
+
+.desc {
+display: flex;
+flex-direction: column;
 }
